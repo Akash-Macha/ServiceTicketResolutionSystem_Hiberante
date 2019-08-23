@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This web.xml file is not required when using Servlet 3.0 container,
+     see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>com.hibernate.HibernateClientWorkout</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <url-pattern>/webapi/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Validate</display-name>
+    <servlet-name>Validate</servlet-name>
+    <servlet-class>controllers.Validate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Validate</servlet-name>
+    <url-pattern>/Validate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EndUserOperations</display-name>
+    <servlet-name>EndUserOperations</servlet-name>
+    <servlet-class>controllers.EndUserOperations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EndUserOperations</servlet-name>
+    <url-pattern>/EndUserOperations</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServiceEngineerOperations</display-name>
+    <servlet-name>ServiceEngineerOperations</servlet-name>
+    <servlet-class>controllers.ServiceEngineerOperations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServiceEngineerOperations</servlet-name>
+    <url-pattern>/ServiceEngineerOperations</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Logout</display-name>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>controllers.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminOperations</display-name>
+    <servlet-name>AdminOperations</servlet-name>
+    <servlet-class>controllers.AdminOperations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminOperations</servlet-name>
+    <url-pattern>/AdminOperations</url-pattern>
+  </servlet-mapping>
+</web-app>
