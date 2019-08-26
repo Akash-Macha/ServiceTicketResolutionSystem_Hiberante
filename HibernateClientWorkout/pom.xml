@@ -90,10 +90,6 @@
 			<artifactId>hibernate-java8</artifactId>
 			<version>5.1.0.Final</version>
 		</dependency>
-
-
-
-
 	</dependencies>
 	<properties>
 		<jersey.version>2.29</jersey.version>
